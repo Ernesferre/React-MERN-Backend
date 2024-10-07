@@ -9,7 +9,7 @@ const crearUsuario = async (req, res = response) => {
   try {
     let usuario = await Usuario.findOne({ email });
 
-    console.log(usuario);
+    console.log("Usuario", usuario);
 
     if (usuario) {
       return res.status(400).json({
